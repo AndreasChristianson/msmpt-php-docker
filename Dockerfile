@@ -1,4 +1,4 @@
-FROM 8.3.11-fpm-alpine3.20
+FROM php:8.3.11-fpm-alpine3.20
 
 # copy own msmtp sender
 COPY ./msmtpsend.sh ./msmtpsendpw.sh /bin/
