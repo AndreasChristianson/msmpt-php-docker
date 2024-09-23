@@ -5,11 +5,11 @@ COPY ./msmtpsend.sh ./msmtpsendpw.sh /bin/
 
 # install msmtp, and set helber script as mailer
 RUN chmod +x /bin/msmtpsend.sh \
-	&& chmod +x /bin/msmtpsendpw.sh \
-    
+	&& chmod +x /bin/msmtpsendpw.sh
+
 RUN apt-get update \
     && apt-get install -y msmtp \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/lists/*
 
-ENV TLS_ONOFF=on \
-	STARTTLS_ONOFF=on 
+ENV TLS_ONOFF=on
+ENV STARTTLS_ONOFF=on
