@@ -1,5 +1,4 @@
-ARG BASEIMAGE_TAG=latest
-FROM kimbtechnologies/php_nginx:latest
+FROM 8.3.11-fpm-alpine3.20
 
 # copy own msmtp sender
 COPY ./msmtpsend.sh ./msmtpsendpw.sh /bin/
