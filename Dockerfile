@@ -1,7 +1,7 @@
 FROM php:8.3.11-apache-bookworm
 
-RUN docker-php-ext-install pdo_mysql
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql \
+    && docker-php-ext-enable pdo_mysql
 
 RUN apt-get update --fix-missing \
     && apt-get install -y msmtp \
